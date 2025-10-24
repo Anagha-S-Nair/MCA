@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course Admission Registration Form</title>
+</head>
+<body>
+
+  <h2 align="center">Course Admission Registration Form</h2>
+
+  <form>
+
+    <!-- Personal Information -->
+    <h3>Personal Information</h3>
+    <hr>
+
+    Name: <input type="text" name="name"><br><br>
+
+    Gender:
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <br><br>
+
+    Date of Birth: <input type="date" name="dob"><br><br>
+
+    Address: <br>
+    <textarea name="address" rows="3" cols="40"></textarea><br><br>
+
+    Phone: <input type="text" name="phone"><br><br>
+
+    Guardian Name: <input type="text" name="guardian"><br><br>
+
+    Hobbies & Extra-curricular Activities: <br>
+    <input type="checkbox" name="hobby" value="Sports"> Sports
+    <input type="checkbox" name="hobby" value="Music"> Music
+    <input type="checkbox" name="hobby" value="Reading"> Reading
+    <input type="checkbox" name="hobby" value="Dance"> Dance
+    <input type="checkbox" name="hobby" value="Other"> Other
+    <br><br>
+
+    <!-- Course Selection -->
+    <h3>Course Selection</h3>
+    <hr>
+    Select Course:
+    <select name="course">
+      <option value="BA">B.A</option>
+      <option value="BSc">B.Sc</option>
+      <option value="BCA">BCA</option>
+    </select>
+    <br><br>
+
+    <!-- Office Use -->
+    <h3>Office Use Only</h3>
+    <hr>
+    <table border="1" cellpadding="5" cellspacing="0">
+      <tr>
+        <th>Application No.</th>
+        <th>Date Received</th>
+        <th>Remarks</th>
+      </tr>
+      <tr>
+        <td><input type="text" name="appno"></td>
+        <td><input type="date" name="datereceived"></td>
+        <td><textarea rows="2" cols="30"></textarea></td>
+      </tr>
+    </table>
+    <br>
+
+    <input type="submit" value="Submit">
+
+  </form>
+
+</body>
+</html>
