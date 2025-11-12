@@ -9,6 +9,7 @@ class Rectangle:
 
     def __lt__(self, other):
         return self.area() < other.area()
+    
 rect1 = Rectangle(5,3)
 rect2 = Rectangle(4,6)
 print("Area of Rectangle 1:", rect1.area())
