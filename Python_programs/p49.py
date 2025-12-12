@@ -1,1 +1,49 @@
 #Compare above 2 students based on pass percentage.
+class Person:
+    def __init__(self, name, roll):
+        self.name = name
+        self.roll = roll
+
+class Marks:
+    def __init__(self, maths, computer):
+        self.maths = maths
+        self.computer = computer
+
+class Student(Person, Marks):
+    def __init__(self, name, roll, maths, computer):
+        Person.__init__(self, name, roll)
+        Marks.__init__(self, maths, computer)
+
+    def get_percentage(self):
+        return (self.maths + self.computer) / 2
+
+    def display(self):
+        percentage = self.get_percentage()
+
+        print(f"Student Name: {self.name}")
+        print(f"Roll Number: {self.roll}")
+        print(f"Maths Marks: {self.maths}")
+        print(f"Computer Marks: {self.computer}")
+        print(f"Percentage: {percentage}%")
+
+        if percentage >= 50:
+            print("Result: Pass")
+        else:
+            print("Result: Fail")
+
+
+student1 = Student("John Doe", "A123", 70, 80)
+student2 = Student("Jane Smith", "B456", 40, 60)
+
+student1.display()
+print()
+student2.display()
+print()
+
+
+if student1.get_percentage() > student2.get_percentage():
+    print(f"{student1.name} has a higher percentage than {student2.name}.")
+elif student1.get_percentage() < student2.get_percentage():
+    print(f"{student2.name} has a higher percentage than {student1.name}.")
+else:
+    print("Both students have the same percentage.")
