@@ -9,7 +9,7 @@ print("Positive numbers in the list: ",pos_num)"""
 sq_num=[n**2 for n in num]
 print("Square of numbers in the list: ",sq_num)"""
 
-#From a list containing vowels from a guvwn word
+#From a list containing vowels from a given word
 """word=input("Enter a word: ").lower()
 vowels=[char for char in word if char in 'aeiou']
 print("Vowels in the word: ",vowels)"""

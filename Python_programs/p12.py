@@ -1,6 +1,6 @@
-"""#pattern printing
+#pattern printing
 num=int(input("Enter number of lines: "))
-for i in range(num+1):
+"""for i in range(num+1):
     for k in range(num-i):
         print(" ",end="")
     for j in range(i):

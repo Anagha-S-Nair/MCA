@@ -1,3 +1,4 @@
+#To find the factors of a number
 n=int(input("Enter a number: "))
 print("Factors")
 for i in range(1,n+1):

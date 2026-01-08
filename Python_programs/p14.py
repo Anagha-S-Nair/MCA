@@ -5,3 +5,10 @@ for name in first_names:
     if name.strip().lower().startswith('a'):
         count+=1
 print("Number of names starting with A: ",count)
+
+#Each word in a line
+line=input("Enter a line: ")
+words=line.split()
+print("Words in the line: ")
+for word in words:
+    print(word)
