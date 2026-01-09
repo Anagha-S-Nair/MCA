@@ -19,7 +19,6 @@ class Student(Person, Marks):
 
     def display(self):
         percentage = self.get_percentage()
-
         print(f"Student Name: {self.name}")
         print(f"Roll Number: {self.roll}")
         print(f"Maths Marks: {self.maths}")
@@ -34,12 +33,10 @@ class Student(Person, Marks):
 
 student1 = Student("John Doe", "A123", 70, 80)
 student2 = Student("Jane Smith", "B456", 40, 60)
-
 student1.display()
 print()
 student2.display()
 print()
-
 
 if student1.get_percentage() > student2.get_percentage():
     print(f"{student1.name} has a higher percentage than {student2.name}.")
