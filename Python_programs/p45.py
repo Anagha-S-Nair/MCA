@@ -1,4 +1,5 @@
-#Create class Book(title,author).Add attribute 'publisher' at runtime. If the attribute 'publisher' is avaliable  in Book object,then print <title> written by <author> is published by <publisher>.Else print 'Unknown publisher'.
+#Create class Book(title,author).Add attribute 'publisher' at runtime.
+#If the attribute 'publisher' is avaliable  in Book object,then print <title> written by <author> is published by <publisher>.Else print 'Unknown publisher'.
 class Book:
     def __init__(self, title, author):
         self.title = title

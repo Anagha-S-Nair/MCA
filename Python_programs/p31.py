@@ -1,4 +1,5 @@
-#Create class Engine(_power) and wheels(_size).Derive the class Car(_model) from Engine and Wheels.Display details of the car using method overriding.
+#Create class Engine(_power) and wheels(_size).Derive the class Car(_model) from Engine and Wheels.
+# Display details of the car using method overriding.
 class Engine:
     def __init__(self, power):
         self._power = power
