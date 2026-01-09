@@ -1,4 +1,5 @@
-#Create a class Publisher(name).Derive a class Book(title,author) from Publisher.Derive a class Python(price,no_of_pages) from Book.Write a program that dispalys information about a Python book.Use base class constructor invocation and method overriding.
+#Create a class Publisher(name).Derive a class Book(title,author) from Publisher.Derive a class Python(price,no_of_pages) from Book.
+# Write a program that dispalys information about a Python book.Use base class constructor invocation and method overriding.
 class Publisher:
     def __init__(self, name):
         self.name = name

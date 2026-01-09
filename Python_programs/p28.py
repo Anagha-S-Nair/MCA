@@ -1,4 +1,4 @@
-#Create a class rectangle with private attributes length and width.Overload '<' operator to compare the are a of two rectangles.
+#Create a class rectangle with private attributes length and width.Overload '<' operator to compare the area of two rectangles.
 class Rectangle:
     def __init__(self, length, width):
         self.__length = length
