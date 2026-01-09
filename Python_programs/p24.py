@@ -11,6 +11,7 @@ print("Divisibility? ",divisibility(num))
 
 # Take input and split into list of words
 str_list = input("Enter words separated by space: ").split()
+
 # Use lambda with filter to keep words of length >= 5
 new_list = list(filter(lambda s: len(s) >= 5, str_list))
 print("New list:", new_list)

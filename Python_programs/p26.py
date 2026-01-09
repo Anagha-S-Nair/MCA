@@ -9,7 +9,7 @@ class Rectangle:
         return 2*(self.length+self.breadth)
 rect1=Rectangle(5,3)
 rect2=Rectangle(4,4)
-print("Rectangle 1-Areaa:",rect1.area(),"Perimeter:",rect1.perimeter())
+print("Rectangle 1-Area:",rect1.area(),"Perimeter:",rect1.perimeter())
 print("Rectangle 2-Area:",rect2.area(),"Perimeter:",rect2.perimeter())
 if rect1.area()>rect2.area():
     print("Rectangle 1 has larger area")
