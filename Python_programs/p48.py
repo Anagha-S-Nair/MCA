@@ -3,10 +3,12 @@ class Person:
     def __init__(self, name, roll):
         self.name = name
         self.roll = roll
+        
 class Marks:
     def __init__(self, maths, computer):
         self.maths = maths
         self.computer = computer
+
 class Student(Person, Marks):
     def __init__(self, name, roll, maths, computer):
         Person.__init__(self, name, roll)
