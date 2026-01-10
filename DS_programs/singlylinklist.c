@@ -22,9 +22,6 @@ void deleteByValue();
 void traverse();
 void countNodes();
 
-// =================================================================
-// MAIN FUNCTION AND MENU
-// =================================================================
 
 int main() {
     int choice;
