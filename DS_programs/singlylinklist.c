@@ -59,10 +59,6 @@ int main() {
     return 0;
 }
 
-// =================================================================
-// CREATION AND INSERTION FUNCTIONS
-// =================================================================
-
 // Create a new list by adding the first node
 void createList() {
     if (start != NULL) {
