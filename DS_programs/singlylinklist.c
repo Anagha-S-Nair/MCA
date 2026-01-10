@@ -200,9 +200,7 @@ void insertAtPosition() {
     }
 }
 
-// =================================================================
-// DELETION FUNCTIONS
-// =================================================================
+
 
 // Delete from beginning
 void deleteFromBeginning() {
