@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 // Structure of a node in a Singly Linked List
-struct node {
+struct node
+{
     int data;
     struct node *next;
     // Note: No 'prev' pointer, making operations simpler but limiting backward traversal.
@@ -22,11 +23,12 @@ void deleteByValue();
 void traverse();
 void countNodes();
 
-
-int main() {
+int main()
+{
     int choice;
 
-    do {
+    do
+    {
         printf("\n=== SINGLY LINKED LIST MENU ===\n");
         printf("1. Create List\n");
         printf("2. Insert at Beginning\n");
@@ -37,22 +39,44 @@ int main() {
         printf("7. Delete by Value\n");
         printf("8. Traverse (Display)\n");
         printf("9. Count Nodes\n");
-        printf("10. Exit\n"); 
+        printf("10. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
-        switch (choice) {
-            case 1: createList(); break;
-            case 2: insertAtBeginning(); break;
-            case 3: insertAtEnd(); break;
-            case 4: insertAtPosition(); break;
-            case 5: deleteFromBeginning(); break;
-            case 6: deleteFromEnd(); break;
-            case 7: deleteByValue(); break;
-            case 8: traverse(); break;
-            case 9: countNodes(); break;
-            case 10: printf("Exiting...\n"); break;
-            default: printf("Invalid choice! Try again.\n");
+        switch (choice)
+        {
+        case 1:
+            createList();
+            break;
+        case 2:
+            insertAtBeginning();
+            break;
+        case 3:
+            insertAtEnd();
+            break;
+        case 4:
+            insertAtPosition();
+            break;
+        case 5:
+            deleteFromBeginning();
+            break;
+        case 6:
+            deleteFromEnd();
+            break;
+        case 7:
+            deleteByValue();
+            break;
+        case 8:
+            traverse();
+            break;
+        case 9:
+            countNodes();
+            break;
+        case 10:
+            printf("Exiting...\n");
+            break;
+        default:
+            printf("Invalid choice! Try again.\n");
         }
     } while (choice != 10);
 
@@ -60,8 +84,10 @@ int main() {
 }
 
 // Create a new list by adding the first node
-void createList() {
-    if (start != NULL) {
+void createList()
+{
+    if (start != NULL)
+    {
         printf("List already created.\n");
         return;
     }
@@ -69,8 +95,9 @@ void createList() {
     int val;
     struct node *newnode;
 
-    newnode = (struct node*)malloc(sizeof(struct node));
-    if (!newnode) {
+    newnode = (struct node *)malloc(sizeof(struct node));
+    if (!newnode)
+    {
         printf("Memory allocation failed.\n");
         return;
     }
@@ -88,19 +115,22 @@ void createList() {
 }
 
 // Insert at beginning
-void insertAtBeginning() {
-    if (start == NULL) {
+void insertAtBeginning()
+{
+    if (start == NULL)
+    {
         createList();
         return;
     }
 
     int val;
-    struct node *newnode = (struct node*)malloc(sizeof(struct node));
-    if (!newnode) {
+    struct node *newnode = (struct node *)malloc(sizeof(struct node));
+    if (!newnode)
+    {
         printf("Memory allocation failed.\n");
         return;
     }
-    
+
     printf("Enter data to insert at beginning: ");
     scanf("%d", &val);
 
@@ -113,15 +143,18 @@ void insertAtBeginning() {
 }
 
 // Insert at end
-void insertAtEnd() {
-    if (start == NULL) {
+void insertAtEnd()
+{
+    if (start == NULL)
+    {
         createList();
         return;
     }
 
     int val;
-    struct node *newnode = (struct node*)malloc(sizeof(struct node));
-    if (!newnode) {
+    struct node *newnode = (struct node *)malloc(sizeof(struct node));
+    if (!newnode)
+    {
         printf("Memory allocation failed.\n");
         return;
     }
@@ -133,7 +166,8 @@ void insertAtEnd() {
     newnode->data = val;
     newnode->next = NULL;
 
-    while (temp->next != NULL) {
+    while (temp->next != NULL)
+    {
         temp = temp->next;
     }
 
@@ -144,8 +178,10 @@ void insertAtEnd() {
 }
 
 // Insert at a specific position
-void insertAtPosition() {
-    if (start == NULL) {
+void insertAtPosition()
+{
+    if (start == NULL)
+    {
         printf("List is empty. Using Create List to initialize the first node.\n");
         createList();
         return;
@@ -161,36 +197,42 @@ void insertAtPosition() {
     scanf("%d", &pos);
 
     // 1. Check for valid position
-    if (pos < 1 || pos > nodecount + 1) {
+    if (pos < 1 || pos > nodecount + 1)
+    {
         printf("Invalid position! Position must be between 1 and %d.\n", nodecount + 1);
         return;
     }
 
     // 2. Handle Position 1 (Beginning)
-    if (pos == 1) {
+    if (pos == 1)
+    {
         insertAtBeginning();
         return;
     }
     // 3. Handle Position N+1 (End)
-    else if (pos == nodecount + 1) {
+    else if (pos == nodecount + 1)
+    {
         insertAtEnd();
         return;
     }
     // 4. Handle Insertion in the Middle (1 < pos < N+1)
-    else {
+    else
+    {
         // Allocate memory for the new node
-        newnode = (struct node*)malloc(sizeof(struct node));
-        if (!newnode) {
+        newnode = (struct node *)malloc(sizeof(struct node));
+        if (!newnode)
+        {
             printf("Memory allocation failed.\n");
             return;
         }
         newnode->data = val;
 
         // Traverse to the node *before* the insertion point (pos - 1)
-        for (i = 1; i < pos - 1; i++) {
+        for (i = 1; i < pos - 1; i++)
+        {
             temp = temp->next;
         }
-        
+
         // Link the new node
         newnode->next = temp->next;
         temp->next = newnode;
@@ -200,11 +242,11 @@ void insertAtPosition() {
     }
 }
 
-
-
 // Delete from beginning
-void deleteFromBeginning() {
-    if (start == NULL) {
+void deleteFromBeginning()
+{
+    if (start == NULL)
+    {
         printf("List is empty. Cannot delete.\n");
         return;
     }
@@ -215,11 +257,14 @@ void deleteFromBeginning() {
     printf("Deleted element: %d\n", temp->data);
     free(temp);
     nodecount--;
-    if (nodecount == 0) start = NULL;
+    if (nodecount == 0)
+        start = NULL;
 }
 
-void deleteFromEnd() {
-    if (start == NULL) {
+void deleteFromEnd()
+{
+    if (start == NULL)
+    {
         printf("List is empty. Cannot delete.\n");
         return;
     }
@@ -227,13 +272,17 @@ void deleteFromEnd() {
     struct node *temp = start;
 
     // If only one node
-    if (start->next == NULL) {
+    if (start->next == NULL)
+    {
         printf("Deleted element: %d\n", start->data);
         free(start);
         start = NULL;
-    } else {
+    }
+    else
+    {
         // Find second last node
-        while (temp->next->next != NULL) {
+        while (temp->next->next != NULL)
+        {
             temp = temp->next;
         }
         printf("Deleted element: %d\n", temp->next->data);
@@ -242,7 +291,6 @@ void deleteFromEnd() {
     }
     nodecount--;
 }
-
 
 // Delete from end
 // void deleteFromEnd() {
@@ -302,11 +350,11 @@ void deleteFromEnd() {
 //     }
 
 //     // 3. Handle Deletion (current is the node to delete)
-    
+
 //     // Case A: Deleting the Head Node
 //     if (current == start) {
 //         start = start->next;
-//     } 
+//     }
 //     // Case B: Deleting a Middle or End Node
 //     else {
 //         // Link predecessor to successor (skip current)
@@ -322,9 +370,10 @@ void deleteFromEnd() {
 // TRAVERSAL AND COUNT FUNCTIONS
 // =================================================================
 
-
-void deleteByValue() {
-    if (start == NULL) {
+void deleteByValue()
+{
+    if (start == NULL)
+    {
         printf("List is empty. Cannot delete.\n");
         return;
     }
@@ -335,10 +384,11 @@ void deleteByValue() {
 
     printf("Enter data value to delete: ");
     scanf("%d", &item);
-    
+
     // Case 1: Deleting the Head Node (start)
     // Check start->data (using the correct member name 'data')
-    if (start->data == item) {
+    if (start->data == item)
+    {
         temp = start;
         start = start->next;
         printf("Deleted element: %d\n", temp->data); // Print deleted data
@@ -349,12 +399,14 @@ void deleteByValue() {
 
     // Case 2: Deleting a Middle or End Node
     temp = start;
-    // Traverse until temp->next is NULL OR the next node's data matches 'item'
-    while (temp->next != NULL) {
+
+    while (temp->next != NULL)
+    {
         // Check temp->next->data (using the correct member name 'data')
-        if (temp->next->data == item) {
-            head = temp->next;          // head points to the node to be deleted
-            temp->next = head->next;    // temp (predecessor) bypasses head to point to head's successor
+        if (temp->next->data == item)
+        {
+            head = temp->next;                           // head points to the node to be deleted
+            temp->next = head->next;                     // temp (predecessor) bypasses head to point to head's successor
             printf("Deleted element: %d\n", head->data); // Print deleted data
             free(head);
             nodecount--;
@@ -368,15 +420,18 @@ void deleteByValue() {
 }
 
 // Traverse (Display)
-void traverse() {
-    if (start == NULL) {
+void traverse()
+{
+    if (start == NULL)
+    {
         printf("List is empty.\n");
         return;
     }
 
     struct node *temp = start;
     printf("List elements: ");
-    while (temp != NULL) {
+    while (temp != NULL)
+    {
         printf("%d -> ", temp->data);
         temp = temp->next;
     }
@@ -384,6 +439,7 @@ void traverse() {
 }
 
 // Count nodes
-void countNodes() {
+void countNodes()
+{
     printf("Total number of nodes: %d\n", nodecount);
 }
