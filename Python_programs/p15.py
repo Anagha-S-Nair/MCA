@@ -1,6 +1,6 @@
 #List comprehensions
 ##Create a list of positive numbers from a given list of numbers 
-"""num=list(map(int,input("Enter a list of numbers: ").split()))
+"""num = list(map(int,input("Enter a list of numbers: ").split()))
 pos_num=[n for n in num if n>0]
 print("Positive numbers in the list: ",pos_num)"""
 
