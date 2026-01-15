@@ -2,7 +2,7 @@
 inf = False
 
 try:
-    inf = open('python.txt',encoding = 'UTF-8')
+    inf = open('python.txt')
     lines = inf.readlines()
     print(lines)
     print('No. of lines: ',len(lines))
