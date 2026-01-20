@@ -1,4 +1,5 @@
 # Write a program to copy one file to another file
+
 inf = False
 outf = False
 
