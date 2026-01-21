@@ -1,5 +1,6 @@
 #Create class Person(name,roll) and Marks(Maths,computer).Create class student from person and marks.
 #Display student details and pass/fail,if 50% is needed for pass.
+
 class Person:
     def __init__(self, name, roll):
         self.name = name
@@ -26,7 +27,9 @@ class Student(Person, Marks):
             print("Result: Pass")
         else:
             print("Result: Fail")
+
 # Example usage
+
 student1 = Student("John Doe", "A123", 70, 80)
 student1.display()
 student2 = Student("Jane Smith", "B456", 40, 60)
