@@ -1,5 +1,4 @@
 #Compare above 2 students based on pass percentage.
-
 class Person:
     def __init__(self, name, roll):
         self.name = name
