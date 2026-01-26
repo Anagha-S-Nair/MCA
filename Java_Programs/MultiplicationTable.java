@@ -1,4 +1,5 @@
 // Write a function that generates the multiplication table using non-static method.
+
 import java.util.Scanner;
 class MultiplicationTable{
     void table(int n){
