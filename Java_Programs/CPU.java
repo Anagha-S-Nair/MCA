@@ -40,3 +40,7 @@ class CPU{
         ram.display();
     }
 }
+
+// Non-static inner class → needs object → object.new
+
+// Static nested class → no object needed → new ClassName.InnerClass
