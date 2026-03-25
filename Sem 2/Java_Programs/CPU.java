@@ -1,5 +1,6 @@
 //Create a class CPU with attribute price. Create an inner class Processor(no of cores, manufacturer) and a static method class RAM(memory, manufacturer) inside CPU. 
 // Create an object of CPU and print details of its processor and RAM.
+
 class CPU{
     int price;
     CPU(int price){
