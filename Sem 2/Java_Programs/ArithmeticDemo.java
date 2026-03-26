@@ -1,3 +1,6 @@
+//Create an arithmetic package that has classes and interfaces for basic arithmetic operations (Addition, Subtraction, Multiplication, Division).
+//Test the package by implementing all operations on two given numbers.
+
 import arithmetic.*;
 
 public class ArithmeticDemo {

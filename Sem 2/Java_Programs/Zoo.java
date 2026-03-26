@@ -1,6 +1,7 @@
 //Create class Zoo with the name and region (string array, sample data example area 1, area 2, etc). 
 // Create an inner class Enclosure with the name (string, sample data example grassland, fly zone, aqatic, etc), type (string sample data outdoor, indoor, etc), and animals (string array with animals found in the given enclosure.
 // Create a static nested class Contact with address and phone number. Display details of zoo including its contact info and detailed information of different enclosures.
+
 import java.util.Scanner;
 class Zoo{
     String name;
