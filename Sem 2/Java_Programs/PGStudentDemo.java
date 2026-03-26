@@ -1,3 +1,10 @@
+//Create a class Person with data members- name,gender,phoneno.create an interface showable with void show(). 
+//Create a class Student that inherits from Person with data members- course,score.
+//Derive a class PGStudent that inherits from Student with data members- researchArea,guide. 
+//Create N PGstudent and
+//(i)rank them based on scores.
+//(ii)sort them based on research area.
+//Display the details using show().
 import java.util.*;
 interface showable{
     void show();

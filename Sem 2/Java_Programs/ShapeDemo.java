@@ -1,3 +1,7 @@
+//Create an interface Shape with function area() and perimeter(). 
+// Create two classes Circle and Rectangle which implements the above interface.
+//Create a menu driven program to find area and perimeter of various shapes.
+
 import java.util.Scanner;
 interface Shape{
     double area();

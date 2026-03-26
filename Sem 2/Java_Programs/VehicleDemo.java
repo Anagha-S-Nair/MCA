@@ -1,3 +1,7 @@
+//Create a class abstract(Model,Company).Create a class Car(No of doors,fuel type) that inherits from Vehicle.
+// Create a class Electric(Battery capacity) that inherits from Car. 
+//Include the concepts of abstract base class,dynamic method dispatch,constructor as well as method overriding.
+
 abstract class Vechile{
     String model;
     String Company;

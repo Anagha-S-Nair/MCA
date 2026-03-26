@@ -1,3 +1,6 @@
+//Create a class Person with data members- name,gender,address,age. Create a class Employee that inherits from Person with data members- empid,companyName,qualification,salary.
+//Derive a class Teacher that inherits from Employee with data members- teacherid,subject,department.
+//Demonstrate using N Teachers
 class Person{
     String name,gender,address;
     int age;
