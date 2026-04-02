@@ -1,3 +1,4 @@
+//
 interface Comparable{
     double volume();
     int compare(Comparable other);
