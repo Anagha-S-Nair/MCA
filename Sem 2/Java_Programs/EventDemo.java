@@ -1,17 +1,23 @@
-//Store a list of attendees , where each attendee is represented by an Attendee class with name,email and registrationID(unique integer).Ensure that each attendee is registered only once(ie,no duplicate registrations based on registrationIDs).
+//PROGRAM-20
+//Store a list of attendees , where each attendee is represented by an Attendee class with name,email and registrationID(unique integer).
+//Ensure that each attendee is registered only once(ie,no duplicate registrations based on registrationIDs).
+
 import java.util.*;
-class Attendee{
+
+class Attendee {
     String name;
     String email;
     int registrationID;
-    Attendee(String n,String e,int r){
-        name=n;
-        email=e;
-        registrationID=r;
+
+    Attendee(String n, String e, int r) {
+        name = n;
+        email = e;
+        registrationID = r;
     }
-    public String toString(){
+
+    public String toString() {
         return registrationID + "-" + name + "-" + email;
-        }
+    }
 }
 
 public class EventDemo {
